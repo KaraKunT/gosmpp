@@ -103,7 +103,7 @@ Full example could be found: [gist](https://gist.github.com/linxGnu/b488997a0e62
 - [x] generic_nack
 
 
-
+```go
 func (c *ShortMessage) SetMessageWithEncodingBasic(ud []byte, udh UDH) (err error) {
 	// UDH ve User Data'yı ayarla
 	c.udHeader = udh
@@ -116,3 +116,4 @@ func (c *ShortMessage) SetMessageWithEncodingBasic(ud []byte, udh UDH) (err erro
 
 	return nil
 }
+```
