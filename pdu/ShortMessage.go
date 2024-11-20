@@ -57,6 +57,19 @@ func NewLongMessageWithEncoding(message string, enc data.Encoding) (s []*ShortMe
 	return sm.split()
 }
 
+func (c *ShortMessage) SetMessageWithEncodingBasic(ud []byte, udh UDH) (err error) {
+	// UDH ve User Data'yı ayarla
+	c.udHeader = udh
+	c.messageData = ud
+
+	// Mesaj uzunluğunu kontrol et
+	if len(c.messageData) > data.SM_MSG_LEN {
+		return errors.ErrShortMessageLengthTooLarge
+	}
+
+	return nil
+}
+
 // SetMessageWithEncoding sets message with encoding.
 func (c *ShortMessage) SetMessageWithEncoding(message string, enc data.Encoding) (err error) {
 	if c.messageData, err = enc.Encode(message); err == nil {
