@@ -101,3 +101,18 @@ Full example could be found: [gist](https://gist.github.com/linxGnu/b488997a0e62
 - [x] enquire_link_resp
 - [x] alert_notification
 - [x] generic_nack
+
+
+
+func (c *ShortMessage) SetMessageWithEncodingBasic(ud []byte, udh UDH) (err error) {
+	// UDH ve User Data'yı ayarla
+	c.udHeader = udh
+	c.messageData = ud
+
+	// Mesaj uzunluğunu kontrol et
+	if len(c.messageData) > data.SM_MSG_LEN {
+		return errors.ErrShortMessageLengthTooLarge
+	}
+
+	return nil
+}
