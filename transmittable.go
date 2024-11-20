@@ -9,7 +9,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/linxGnu/gosmpp/pdu"
+	"github.com/KaraKunT/gosmpp/pdu"
 )
 
 var (

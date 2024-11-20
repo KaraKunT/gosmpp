@@ -4,7 +4,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/linxGnu/gosmpp/pdu"
+	"github.com/KaraKunT/gosmpp/pdu"
 )
 
 // Transceiver interface.

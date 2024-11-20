@@ -7,9 +7,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/linxGnu/gosmpp"
-	"github.com/linxGnu/gosmpp/data"
-	"github.com/linxGnu/gosmpp/pdu"
+	"github.com/KaraKunT/gosmpp"
+	"github.com/KaraKunT/gosmpp/data"
+	"github.com/KaraKunT/gosmpp/pdu"
 )
 
 func main() {

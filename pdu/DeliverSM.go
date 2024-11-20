@@ -1,7 +1,7 @@
 package pdu
 
 import (
-	"github.com/linxGnu/gosmpp/data"
+	"github.com/KaraKunT/gosmpp/data"
 )
 
 // DeliverSM PDU is issued by the SMSC to send a message to an ESME.

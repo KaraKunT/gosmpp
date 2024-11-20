@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/linxGnu/gosmpp/data"
-	"github.com/linxGnu/gosmpp/pdu"
+	"github.com/KaraKunT/gosmpp/data"
+	"github.com/KaraKunT/gosmpp/pdu"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
