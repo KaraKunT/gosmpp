@@ -124,6 +124,19 @@ func (c *ShortMessage) SetMessageDataWithEncoding(d []byte, enc data.Encoding) (
 	return
 }
 
+func (c *ShortMessage) SetMessageDataWithEncodingBasic(ud []byte, udh UDH, enc data.Encoding) (err error) {
+	// UDH ve User Data'yı ayarla
+	c.udHeader = udh
+	c.messageData = ud
+	c.enc = enc
+
+	// Mesaj uzunluğunu kontrol et
+	if len(c.messageData) > data.SM_MSG_LEN {
+		return errors.ErrShortMessageLengthTooLarge
+	}
+	return nil
+}
+
 // GetMessageData returns underlying binary message.
 func (c *ShortMessage) GetMessageData() (d []byte, err error) {
 	return c.messageData, nil
